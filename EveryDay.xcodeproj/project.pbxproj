@@ -141,6 +141,7 @@
 				D20FCA952BBCBC670003ED5F /* EveryDayRelease.entitlements */,
 				D2ADA7752BB7791100EF934D /* Info.plist */,
 				D20FD0622B87030300DAC52E /* EveryDayApp.swift */,
+				32401942A946419D9AEDD709 /* Config.plist */,
 				D20FD0642B87030300DAC52E /* ContentView.swift */,
 				D2BF7E333969964F86BEF21C /* TextEditorView.swift */,
 				D20FCA982BC10F570003ED5F /* LoadingView.swift */,
@@ -307,6 +308,7 @@
 			files = (
 				D20FD06A2B87030400DAC52E /* Preview Assets.xcassets in Resources */,
 				D20FD0672B87030400DAC52E /* Assets.xcassets in Resources */,
+				F878829A72194C3CACD509BC /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

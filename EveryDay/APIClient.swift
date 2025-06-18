@@ -8,7 +8,15 @@
 import Foundation
 
 class APIClient {
-    static let apiKey = "YOUR_ANTHROPIC_API_KEY_HERE" // Replace with your actual API key
+    static let apiKey: String = {
+        guard let path = Bundle.main.path(forResource: "Config", ofType: "plist"),
+              let plist = NSDictionary(contentsOfFile: path),
+              let key = plist["ANTHROPIC_API_KEY"] as? String,
+              key != "YOUR_ANTHROPIC_API_KEY_HERE" else {
+            fatalError("Please add your Anthropic API key to Config.plist")
+        }
+        return key
+    }()
     
     
     static func sendMessageToAssistant(message: String, systemPrompt: String, completion: @escaping (Result<String, Error>) -> Void) {
